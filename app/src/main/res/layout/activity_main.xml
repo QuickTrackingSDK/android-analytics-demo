@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context="com.aliyun.qaplusdemo.MainActivity">
+
+    <!-- 设置普通指示器 -->
+    <com.donkingliang.banner.CustomBanner
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:indicatorStyle="ORDINARY"
+        app:indicatorGravity="CENTER"
+        app:indicatorSelectRes="@drawable/shape_point_select"
+        app:indicatorUnSelectRes="@drawable/shape_point_unselect"
+        app:indicatorInterval="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_user_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/banner"
+        android:paddingTop="8dp"
+        android:text="@string/user"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_user"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_user_login"
+        android:layout_toRightOf="@id/tv_user_login"
+        android:hint="@string/hint_content"
+        android:textColorHint="@android:color/darker_gray"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/et_user"
+        android:layout_alignParentRight="true"
+        android:text="@string/user_logout"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_logout"
+        android:layout_toLeftOf="@id/btn_logout"
+        android:text="@string/user_login"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_current_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text="@string/user_id"/>
+
+    <TextView
+        android:id="@+id/tv_id_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_current_user"
+        android:layout_toRightOf="@id/tv_current_user"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/div1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_current_user"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/div1"
+        android:paddingTop="8dp"
+        android:text="@string/search_value"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_search_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_search"
+        android:layout_toRightOf="@id/tv_search"
+        android:hint="@string/hint_content"
+        android:textColorHint="@android:color/darker_gray"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_search_value"
+        android:text="@string/search"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/div2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/btn_search"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tv_args"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/div2"
+        android:paddingTop="8dp"
+        android:text="@string/global_args"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_args"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_args"
+        android:layout_toRightOf="@id/tv_args"
+        android:hint="@string/hint_args"
+        android:textColorHint="@android:color/darker_gray"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_clear_args"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/et_args"
+        android:layout_alignParentRight="true"
+        android:text="@string/clear_args"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_set_args"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_clear_args"
+        android:layout_toLeftOf="@id/btn_clear_args"
+        android:text="@string/setting_args"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_current_args"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/btn_set_args"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text="@string/args"/>
+
+    <EditText
+        android:id="@+id/et_args_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_current_args"
+        android:layout_toRightOf="@id/tv_current_args"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:minLines="2"
+        android:maxLines="3"
+        android:scrollbars="vertical"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+
+    <Button
+        android:id="@+id/btn_webview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_args_value"
+        android:layout_marginTop="10dp"
+        android:text="@string/webview_page"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_x5webview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_webview"
+        android:layout_alignTop="@id/btn_webview"
+        android:text="@string/x5webview_page"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_base_conf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_webview"
+        android:layout_marginTop="2dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:text="@string/base_conf"/>
+    <TextView
+        android:id="@+id/tv_current_appkey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_base_conf"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text="@string/current_appkey"/>
+    <TextView
+        android:id="@+id/tv_new_appkey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:layout_below="@id/tv_current_appkey"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text="@string/new_appkey"/>
+    <EditText
+        android:id="@+id/et_new_appkey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_new_appkey"
+        android:layout_toRightOf="@id/tv_new_appkey"
+        android:hint="@string/hint_content"
+        android:textColorHint="@android:color/darker_gray"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+    <Button
+        android:id="@+id/btn_modify_appkey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_new_appkey"
+        android:layout_alignParentRight="true"
+        android:text="@string/modify"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+    <View
+        android:id="@+id/div3"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_new_appkey"
+        android:background="@android:color/white" />
+    <TextView
+        android:id="@+id/tv_current_host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/div3"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text="@string/current_host"/>
+    <TextView
+        android:id="@+id/tv_new_host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:layout_below="@id/tv_current_host"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:text="@string/new_host"/>
+    <EditText
+        android:id="@+id/et_new_host"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_new_host"
+        android:layout_toRightOf="@id/tv_new_host"
+        android:hint="@string/hint_content"
+        android:textColorHint="@android:color/darker_gray"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+    <Button
+        android:id="@+id/btn_modify_host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_new_host"
+        android:layout_alignParentRight="true"
+        android:text="@string/modify"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+</RelativeLayout>

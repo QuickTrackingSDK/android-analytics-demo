@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">QuickAPlusDemo</string>
+    <string name="hint_content">请输入</string>
+
+    <string name="hint_args">例子:key=val,key2=val2 </string>
+
+    <string name="user">登录用户:</string>
+    <string name="user_login">用户登录</string>
+    <string name="user_logout">用户登出</string>
+    <string name="user_id">当前用户id:</string>
+
+    <string name="global_args">全局参数:</string>
+    <string name="setting_args">设置参数</string>
+    <string name="webview_page">Web测试页</string>
+    <string name="x5webview_page">X5Webview测试页</string>
+    <string name="clear_args">清除参数</string>
+    <string name="args">当前全局参数:</string>
+    <string name="base_conf">基础配置:</string>
+    <string name="current_appkey">当前appkey:</string>
+    <string name="new_appkey">修改appkey:</string>
+    <string name="current_host">当前域名:</string>
+    <string name="new_host">修改域名:</string>
+    <string name="modify">修改</string>
+    <string name="search_value">搜索栏:</string>
+    <string name="search">搜索</string>
+
+    <string name="search_hint">输入搜索关键字</string>
+
+    <string name="search_result">搜索结果:</string>
+
+    <string name="result">结果</string>
+
+    <string name="active_content">活动页</string>
+
+    <string name="back">返回</string>
+
+    <string name="to_main">去首页</string>
+
+    <string name="to_search">去搜索页</string>
+</resources>

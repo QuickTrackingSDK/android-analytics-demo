@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context="com.aliyun.qaplusdemo.ResultActivity">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="@string/active_content"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/div5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/darker_gray" />
+
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/div5"
+        android:layout_marginTop="20dp"
+        android:text="@string/back"
+        android:background="@drawable/button_bg"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_to_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/btn_back"
+        android:text="@string/to_main"
+        android:background="@drawable/button_bg"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_to_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/btn_to_main"
+        android:text="@string/to_search"
+        android:background="@drawable/button_bg"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>
