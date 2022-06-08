@@ -28,8 +28,8 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="atm.64632267" />
-                <data android:scheme="utm.64632267" />
+                <data android:scheme="atm.您的appkey" />
+                <data android:scheme="utm.您的appkey" />
             </intent-filter>
         </activity>
         <activity android:name=".ResultActivity"
