@@ -5,169 +5,146 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=0.5" />
   <meta name="description" content="Web site created using create-react-app" />
-  <!-- <meta name="aplus-vt-cfg-url" content="https://dt.alicdn.com/alilog/vtdaily/web/61532104275452.json"> -->
-  <!-- <meta name="aplus-vt-cfg-url" content="https://dt.alicdn.com/alilog/vtdaily/web/43572105142324.json"> -->
+  <meta name="aplus-heatmap-enabled" content="1">
+  <meta name="aplus-rate-ahot" content="1">
+  <!-- <meta name="aplus-vt-cfg-url" content="https://alidt.alicdn.com/alilog/vt/web/s9hicv4t5n6ou8kxi0j3s5bm/57982206017880.json"> -->
+  <meta name="aplus-vt-cfg-url" content="https://alidt.alicdn.com/alilog/vt/web/bq1kdhgh7bpi39kylqvewnea/10062206151513.json">
 
-  <title>React App</title>
+  <title>QT WEB SDK集成Demo</title>
   
   <script>
-    // var AtmBridge =  {
-    //   trace: function(method, params, sussessCall, failCall) {
-    //     console.log('yz-----params', method, params, sussessCall, failCall);
-    //   }
-    // };
-    // window.AtmBridge = AtmBridge;
-
     (function(w, d, s, q, i) {
       w[q] = w[q] || [];
       var f = d.getElementsByTagName(s)[0],j = d.createElement(s);
       j.async = true;
       j.id = 'beacon-aplus';
-      j.src = 'https://d.alicdn.com/alilog/mlog/aplus/203498814.js'; // 一创 版本js sdk
+      j.src = "https://d.alicdn.com/alilog/mlog/aplus/204490144.js"; //全埋点
+      // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204344376.js"; //可视化
       f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'aplus_queue', '203252199');
+    })(window, document, 'script', 'aplus_queue', '');
 
     aplus_queue.push({
       action: 'aplus.setMetaInfo',
-      arguments: ['globalproperty', {
+      arguments: ['appKey', 's9hicv4t5n6ou8kxi0j3s5bm'] //应用appKey 必填
+    });
+
+    aplus_queue.push({
+      action: 'aplus.setMetaInfo',
+      arguments: ['aplus-rhost-v', 'http://log-api.aplus.emas-poc.com']  //收数域名 必填
+    });
+
+    aplus_queue.push({
+      action: 'aplus.setMetaInfo',
+      arguments: ['globalproperty', {   //全局属性
         a: 11,
         b: 22,
         c: 33
       }]
     });
 
-    // aplus_queue.push({
-    //   action: 'aplus.setMetaInfo',
-    //   arguments: ['aplus-waiting', 'MAN']
-    // });
-
     aplus_queue.push({
       action: 'aplus.setMetaInfo',
-      arguments: ['appKey', '30750468']
-    })
-
-    aplus_queue.push({
-      action: 'aplus.setMetaInfo',
-      // arguments: ['aplus-rhost-v', 'aplus2-app-api-release.emas-poc.com'] // aplus2-app-api-release.emas-poc.com
-      arguments: ['aplus-rhost-v', 'log-api.aplus.emas-poc.com'] // aplus2-app-api-release.emas-poc.com
+      arguments: ['DEBUG', true]   // 控制台打印sdk日志
     });
 
+
     aplus_queue.push({
       action: 'aplus.setMetaInfo',
-      arguments: ['DEBUG', true]
+      arguments: ['_user_id', 'a_test_user_id']  //用户账号id
     });
-
-//     aplus_queue.push({
-//       action: 'aplus.setMetaInfo',
-//       arguments: ['_anony_id', 'test666666']
-//     });
-// //aplus2-app-api-release.emas-poc.com
-//     aplus_queue.push({
-//       action: 'aplus.setMetaInfo',
-//       arguments: ['_dev_id', 'a_test_dev_id']
-//     });
-
-    // aplus_queue.push({
-    //   action: 'aplus.setMetaInfo',
-    //   arguments: ['_user_id', 'a_test_user_id']
-    // });
-
-    // aplus_queue.push({
-    //   action: 'aplus.setMetaInfo',
-    //   arguments: ['_user_nick', 'a_test_user_nick']
-    // });
-
+    
     aplus_queue.push({
       action: 'aplus.setMetaInfo',
-      arguments: ['aplus-auto-exp', [
-        // {
-        //   cssSelector: '.public-item',
-        //   logkey: 'exp_gp',
-        //   props: ['data-pagename']
-        // },
-        // { 
-        //   positionSelector: 'slick-list',
-        //   cssSelector: '.quickui-app-select-box',  // （必选参数）待曝光的节点class
-        //   logkey: '/a1z1d1.aplus4ut_page_1.ShowBanner',  // （必选参数）待曝光的节点上报的logkey
-        //   props: ['data-name', 'data-pagename'] // 可选项，dom节点上面的key key的值是动态的参数
-        // },
-        // {
-        //   cssSelector: '.sumit-button',  // （必选参数）待曝光的节点class
-        //   logkey: '/clk',  // （必选参数）待曝光的节点上报的logkey
-        //   props: ['data-name', 'data-pagename'] // 可选项，dom节点上面的key key的值是动态的参数
-        // },
-        {
-          cssSelector: '.title',
-          logkey: 'exp_title',
-          props: []
+      arguments: ['aplus-autotrack-config', {
+        collect_tags: {
+          li: true,
+          img: true,
+          svg: true,
+          div: true,
+          span: true,
+          p: true,
         },
-        // {
-        //   cssSelector: '.exp_search_item',
-        //   logkey: 'exp_search_item',
-        //   rops: []
-        // }
-      ]]
+        collect_input: true,
+        // element_capture_enable: true //设置为true，打开捕获模式监听点击事件
+      }]
     });
 
     aplus_queue.push({
       action: 'aplus.setMetaInfo',
-      arguments: [
-        'aplus-auto-clk',
-        [
-          {
-            cssSelector: '.auto-btn', // 元素的class 
-            logkey: 'auto-clk-id',  // （令箭 ID。以 / 开头的串）
-            props: [], // 元素身上自定义属性
-          },
-        ],
-      ]
+      arguments: ['aplus-autotrack-enabled', true]
     });
 
-    function myFunction() {
-      // aplus_queue.push({
-      //   action: 'aplus.record',
-      //   arguments: ['test_clk', 'CLK', {
-      //     a: 1,
-      //     b: 2,
-      //     page_name: '首页'
-      //   }]
-      // });
+    aplus_queue.push({
+      action: 'aplus.setMetaInfo',
+      arguments: ['aplus-auto-exp', [{
+        cssSelector: '.auto_exp_event',
+        logkey: 'exp_event',
+        props: ['data-pagename']
+      }]]
+    });
+
+    aplus_queue.push({
+      action: 'aplus.setMetaInfo',
+      arguments: ['aplus-auto-clk', [{
+        cssSelector: '.auto_clk_event',
+        logkey: 'clk_event',
+        props: ['data-pagename']
+      }]]
+    });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ["pageConfig", {
+    //     "/" : {
+    //       pageName: 'test_vt_page'
+    //     }
+    //   }]
+    // })
+
+
+    function record() {
+      // 代码埋点上报 test_clk 事件
+      aplus_queue.push({
+        action: 'aplus.record',
+        arguments: ['test_clk', 'CLK', {
+          page_name: 'home_page',
+          property_1: 'a'
+        }]
+      });
     };
 
-    // function setGlobalProperty() {
-    //   aplus_queue.push({
-    //   action: 'aplus.setMetaInfo',
-    //   arguments: ['globalproperty', {
-    //     a: 11,
-    //     b: 22,
-    //     c: 33
-    //   }]
-    // });
-    // };
-
     function sentPV() {
+      // 代码埋点上报 pv 事件
       aplus_queue.push({
         action: 'aplus.sendPV',
         arguments: [{
           is_auto: false
         }, {
-          aaaaaaaaaaaaaaaa: 1,
-          bbbbbbbbbbbbbbbb: 2,
-          page_name: '首页',
-          ts: 1111,
+          page_title: "首页",
+          page_name: 'home_page',
         }]
       });
     };
-   </script>
+
+  </script>
 </head>
 
-<body data-pagename="b123456">
-  <div id="root" data-spmc="c1111">
-    <h1 class="title" data-pagename="测试首页" data-spmd="d1">桥接测试Demo</h1>
-    <button onclick="myFunction()" class="auto-btn" data-pagename="测试首页" data-spmd="d2">测试点击</button>
+<body>
+  <div id="root">
+    <h1 class="title" data-pagename="测试首页"></h1>
+    <button onclick="record()" data-pagename="测试首页">测试点击</button>
     <button onclick="sentPV()">测试PV</button>
-    
-    <!-- <button onclick="setGlobalProperty()">透传超级属性</button> -->
+    <button>全埋点button点击</button>
+    <div class="div_clk">可视化埋点div点击</div>
+    <div>
+      <span>全埋点span点击</span>
+      <p>全埋点p点击</p>
+      <ul>
+        <li>全埋点li点击</li>
+      </ul>
+    </div>
+    <div class="auto_exp_event" data-pagename="autoexp_page">自动曝光</div>
+    <div class="auto_clk_event" data-pagename="autoclk_page">自动点击</div>
   </div>
 </body>
 
