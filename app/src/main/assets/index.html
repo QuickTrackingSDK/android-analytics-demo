@@ -5,54 +5,150 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=0.5" />
   <meta name="description" content="Web site created using create-react-app" />
-  <meta name="aplus-heatmap-enabled" content="1">
-  <meta name="aplus-rate-ahot" content="1">
-  <!-- <meta name="aplus-vt-cfg-url" content="https://alidt.alicdn.com/alilog/vt/web/s9hicv4t5n6ou8kxi0j3s5bm/57982206017880.json"> -->
-  <meta name="aplus-vt-cfg-url" content="https://alidt.alicdn.com/alilog/vt/web/bq1kdhgh7bpi39kylqvewnea/10062206151513.json">
-
-  <title>QT WEB SDK集成Demo</title>
+  <!-- <meta name="aplus-vt-cfg-url" content="https://alidt.alicdn.com/alilog/vt/web/8noknyd7kscbd711r8ap23ak/65572203159703.json"> -->
+  <!-- <meta name="aplus-vt-cfg-url" content="https://alidt.alicdn.com/alilog/vt/web/8noknyd7kscbd711r8ap23ak/66502205163613.json"> -->
+  <!-- <meta name="aplus-heatmap-enabled" content="true" />
+  <meta name="aplus-rate-ahot" content="1"/> -->
+  <!-- <meta name="aplus-vt-cfg-url" content="https://alidt.alicdn.com/alilog/vtdaily/web/0kowetdn0lepln4575kl3ruj/13852202105182.json"> -->
+  <title>React App</title>
   
-  <script>
+  <script charset="UTF-8" id="testsdk">
+
+    // (function(w, d, s, q, i) {
+    //   w[q] = w[q] || [];
+    //   var f = d.getElementsByTagName(s)[0],j = d.createElement(s);
+    //   j.async = true;
+    //   j.id = 'beacon-aplus';
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204442001.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/203731415.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204344376.js?spm=loginner.24374736.0.0.7eee717d1PHeWK&file=204344376.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/203731415.js?spm=loginner.24374736.0.0.2a21717drz97SA&file=203731415.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/203966022.js";
+    //   // j.src = './aplus_cloud_um.js';
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus.js?id=203252199";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204290003.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204290003.js?spm=loginner.24374736.0.0.75a8370dqeU2RO&file=204290003.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204399725.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204287288.js?spm=loginner.24374736.0.0.6da6717dpEOV4Q&file=204287288.js";
+    //   // j.src = "./aplus_cloud_um.js";
+    //   // j.src = "https://public-res.kye-erp.com/bigdata/kyelog/aplus_web_v4_md5_5ed3.js?t=1653634211099";
+    //   // j.src = "https://public-res.kye-erp.com/bigdata/kyelog/aplus_web_v4_md5_5ed3.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204490144.js";
+    //   j.src  = './aplus_cloud_um.js';
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204490144.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/203660523.js?spm=loginner.24374736.0.0.26ac717did4c5p&file=203660523.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/203660523.js";
+    //   // j.src = 'https://public-res.kye-erp.com/bigdata/kyelog/aplus_web_v4_md5_5ed3.js';
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/203660523.js?spm=loginner.24374736.0.0.26ac717dKJT9VZ&file=203660523.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204233981.js?spm=loginner.24374736.0.0.7af9717dRknfWC&file=204233981.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204237414.js?spm=loginner.24374736.0.0.7c24717dCIl1aa&file=204237414.js";
+    //   // j.src = 'https://d.alicdn.com/alilog/mlog/aplus/204237414.js?spm=loginner.24374736.0.0.7c24717dGDioSo&file=204237414.js';
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204237414.js?spm=loginner.24374736.0.0.7c24717dnipXIg&file=204237414.js";
+    //   // j.src = "./aplus_cloud.js";
+    //   // 带设备指纹 和 远程控制
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204207362.js?spm=loginner.24374736.0.0.1f51717dDsNe8r&file=204207362.js";
+    //   // 不带
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204093703.js?spm=loginner.24374736.0.0.497c717dGvvSjM&file=204093703.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/203660523.js";
+    //   // j.src = "https://public-res.kye-erp.com/bigdata/kyelog/aplus_web_v3_md5_43a0.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204093703.js?spm=loginner.24374736.0.0.497c717di0Cak9&file=204093703.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204184784.js?spm=loginner.24374736.0.0.4b78717dc07Dy6&file=204184784.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/203660523.js";
+    //   // j.src = "https://aplus.aliyun.com/alilog/mlog/aplus/203561150.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/203825477.js";
+    //   // j.src = "https://d.alicdn.com/alilog/mlog/aplus/203825477.js";
+    //   w.aplus = {};
+    //   f.parentNode.insertBefore(j, f);
+    // })(window, document, 'script', 'aplus_queue', '204093703');
+
     (function(w, d, s, q, i) {
       w[q] = w[q] || [];
       var f = d.getElementsByTagName(s)[0],j = d.createElement(s);
       j.async = true;
       j.id = 'beacon-aplus';
-      j.src = "https://d.alicdn.com/alilog/mlog/aplus/204490144.js"; //全埋点
-      // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204344376.js"; //可视化
+      // j.src = 'https://d.alicdn.com/alilog/mlog/aplus/204093703.js?spm=loginner.24374736.0.0.6e50717dkkA4Rq&file=204093703.js';
+      // j.src = "https://d.alicdn.com/alilog/mlog/aplus/203419397.js";
+      // j.src = "https://d.alicdn.com/alilog/mlog/aplus/204490144.js";
+      //j.src = "https://d.alicdn.com/alilog/mlog/aplus/203660523.js";
+      j.src = "https://d.alicdn.com/alilog/mlog/aplus/203660523.js?spm=loginner.24374736.0.0.7ddd717dItgpyv&file=203660523.js";
+      // j.src = "./aplus_cloud_um.js";
       f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'aplus_queue', '');
 
-    aplus_queue.push({
-      action: 'aplus.setMetaInfo',
-      arguments: ['appKey', 's9hicv4t5n6ou8kxi0j3s5bm'] //应用appKey 必填
-    });
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-waiting', 'MAN']
+    // });
 
-    aplus_queue.push({
-      action: 'aplus.setMetaInfo',
-      arguments: ['aplus-rhost-v', 'http://log-api.aplus.emas-poc.com']  //收数域名 必填
-    });
-
-    aplus_queue.push({
-      action: 'aplus.setMetaInfo',
-      arguments: ['globalproperty', {   //全局属性
-        a: 11,
-        b: 22,
-        c: 33
-      }]
-    });
-
-    aplus_queue.push({
-      action: 'aplus.setMetaInfo',
-      arguments: ['DEBUG', true]   // 控制台打印sdk日志
-    });
-
-
-    aplus_queue.push({
-      action: 'aplus.setMetaInfo',
-      arguments: ['_user_id', 'a_test_user_id']  //用户账号id
-    });
+    //假设 存在 三个页面
+    //http://localhost:5900?search=abc  //自动pv 被过滤
+    //http://localhost:5900#activity    //自动pv 被过滤
+    //http://localhost:5900#testpage1   //自动pv 不会过滤
+    //原理：依赖子字符串匹配
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-skip-apv-rules', ['sea', 'acti']]
+    // });
     
+    aplus_queue.push({
+      action: 'aplus.setMetaInfo',
+      arguments: ['DEBUG', true]
+    })
+
+    aplus_queue.push({
+      action: 'aplus.setMetaInfo',
+      arguments: ['appKey', 's9hicv4t5n6ou8kxi0j3s5bm'] //钰昭组织 h5_demo
+    });
+
+    aplus_queue.push({
+      action: 'aplus.setMetaInfo',
+      arguments: ['aplus-rhost-v', 'log-api.aplus.emas-poc.com']
+    });
+
+
+
+    // aplus_queue.push({
+    //   action: "aplus.setMetaInfo",
+    //   arguments: ['aplus-jsbridge-only', true]
+    // })
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-rhost-g', 'aplus2-web-api.emas-poc.com']
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['_anony_id', 'test_oid']
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['openid', 'test_open_id']
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['_user_id', 'test_user_id']
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['_user_nick', 'test_user_nick']
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['globalproperty', {
+    //     b: null
+    //   }]
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-disable-apv', true]
+    // });
+
     aplus_queue.push({
       action: 'aplus.setMetaInfo',
       arguments: ['aplus-autotrack-config', {
@@ -63,9 +159,10 @@
           div: true,
           span: true,
           p: true,
+          form: true
         },
         collect_input: true,
-        // element_capture_enable: true //设置为true，打开捕获模式监听点击事件
+        // element_capture_enable: true
       }]
     });
 
@@ -74,78 +171,251 @@
       arguments: ['aplus-autotrack-enabled', true]
     });
 
-    aplus_queue.push({
-      action: 'aplus.setMetaInfo',
-      arguments: ['aplus-auto-exp', [{
-        cssSelector: '.auto_exp_event',
-        logkey: 'exp_event',
-        props: ['data-pagename']
-      }]]
-    });
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-heatmap-enabled', false]
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-pagename', "test_pagename_meta"]
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['pageConfig', {
+    //     // hashMode: true,
+    //     '#/solutionsCenter': {
+    //       pageName: 'hash_home_page_test',
+    //       regRule: /#\/solutionsCenter\/solutionList/,
+    //       skipMe: true
+    //     },
+    //     '/activity': {
+    //       pageName: 'activity_page_test',
+    //       skipMe: true
+    //     },
+    //     '#/testother': {
+    //       pageName: 'hash_home_page_test',
+    //       regRule: /#\/solutionsCenter\/solutionList/,
+    //       skipMe: true
+    //     },
+    //     '/': {
+    //       pageName: 'test_home_1111',
+    //       skipMe: true
+    //     },
+    //     '/autotrack': {
+    //       pageName: 'autotrack_page_test',
+    //     }
+    //   }]
+    // });
 
     aplus_queue.push({
       action: 'aplus.setMetaInfo',
       arguments: ['aplus-auto-clk', [{
-        cssSelector: '.auto_clk_event',
-        logkey: 'clk_event',
-        props: ['data-pagename']
+        cssSelector: '.autotrack_clk_web',
+        logkey: 'autotrack_clk_web',
+        // props: ['data-pagename', 'data-b', "data-abc", "data-ddddd"]
       }]]
     });
 
     // aplus_queue.push({
     //   action: 'aplus.setMetaInfo',
-    //   arguments: ["pageConfig", {
-    //     "/" : {
-    //       pageName: 'test_vt_page'
+    //   arguments: ['aplus-auto-exp', [{
+    //     cssSelector: '.autotrack_exp_web',
+    //     logkey: 'autotrack_exp_web',
+    //     // props: ['data-a', "data-b"]
+    //   }]]
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-auto-clk-userfn', function(e, selector) {       
+    //     if (selector.indexOf('autotrack_clk_web') != -1) {
+    //       var dataset = e.dataset;
+    //       var obj = {};
+    //       obj.itemID = dataset.itemid;
+    //       obj.itemName = dataset.itemname;
+    //       obj.itemZoon = dataset.itemzoon;
+    //       obj.promotionInformation = dataset.promotioninformation;
+    //       obj.pageName = dataset.pagename;          
+    //       return {
+    //         userdata: obj
+    //       };
+    //     }
+    //   }]
+    // })
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-auto-exp-userfn', function(e, selector) {
+    //     if (selector.indexOf('autotrack_exp_web') != -1) {
+    //       var dataset = e.dataset;
+    //       var obj = {};
+    //       obj.itemID = dataset.itemid;
+    //       obj.itemName = dataset.itemname;
+    //       obj.itemZoon = dataset.itemzoon;
+    //       obj.promotionInformation = dataset.promotioninformation;
+    //       obj.pageName = dataset.pagename;          
+    //       return {
+    //         userdata: obj
+    //       };
     //     }
     //   }]
     // })
 
 
-    function record() {
-      // 代码埋点上报 test_clk 事件
-      aplus_queue.push({
-        action: 'aplus.record',
-        arguments: ['test_clk', 'CLK', {
-          page_name: 'home_page',
-          property_1: 'a'
-        }]
+    // window.onload = function(){
+    //   var iframe2 = document.getElementById('iframe2');
+
+    //   aplus_queue.push({
+    //     action: 'aplus.aplus_pubsub.subscribe',
+    //     arguments: ['mw_change_pv', function (content) {
+    //       console.log('yz-----status pv', content);
+  
+    //       iframe2.contentWindow.postMessage({
+    //         sender: 'pv',
+    //       }, '*');
+    //     }]
+    //   })
+  
+    //   aplus_queue.push({
+    //     action: 'aplus.aplus_pubsub.subscribe',
+    //     arguments: ['mw_change_hjlj', function (content) {
+    //       console.log('yz-----status hjlj', content);
+    //       iframe2.contentWindow.postMessage({
+    //         sender: 'hjlj',
+    //       }, '*');
+    //     }]
+    //   })
+    // }
+
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-vt-cfg-url', '<已发布的配置CDN-JSON地址>']
+    // });
+  </script>
+  <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+  <script>
+    var vConsole = new window.VConsole();
+  </script>
+  <script>
+    function testClk2() {
+      console.log('yz-----testClk2');
+    }
+    
+    function push(action, args) {
+      window.aplus_queue.push({
+        action: action,
+        arguments: args
       });
     };
 
-    function sentPV() {
-      // 代码埋点上报 pv 事件
-      aplus_queue.push({
-        action: 'aplus.sendPV',
-        arguments: [{
-          is_auto: false
-        }, {
-          page_title: "首页",
-          page_name: 'home_page',
-        }]
-      });
-    };
+    function testClk() {
+      push('aplus.record', ['test_clk', 'CLK', {a:1 ,b: 2}])
+    }
 
+    function sendPV(args)  {
+      push('aplus.sendPV', [{is_auto:false}, {ts:111}]);
+    };
   </script>
 </head>
 
 <body>
-  <div id="root">
-    <h1 class="title" data-pagename="测试首页"></h1>
-    <button onclick="record()" data-pagename="测试首页">测试点击</button>
-    <button onclick="sentPV()">测试PV</button>
-    <button>全埋点button点击</button>
-    <div class="div_clk">可视化埋点div点击</div>
+  <div id="root" >
+    <div name="代码埋点">
+      <button onclick="testClk()">发送事件</button>
+      <button onclick="sendPV()">发送PV</button>
+      <button class='autotrack_clk_web' data-itemname='读书' data-itemzoon='abc' data-itemid='a_product_id' data-promotioninformation='abc' data-pagename='首页'>自动点击</button>
+      <button class='autotrack_exp_web' data-itemname='读书' data-itemzoon='abc' data-itemid='a_product_id' data-promotioninformation='abc' data-pagename='首页'>自动曝光</button>
+    </div>
     <div>
-      <span>全埋点span点击</span>
-      <p>全埋点p点击</p>
+      <a href="">IamATag</a>
+    </div>
+    <div>
+      <input type="text" id="input" name="input框" required placeholder="please input" minlength="4" maxlength="8" size="10" data-abool=true/>
+    </div>
+    <div>
+      <button onclick="sendPV()">IamButtonTag</button>
+    </div>
+    <div>
+      <textarea id="story" name="story" rows="5" cols="33">IamTextareaTag</textarea>
+    </div>
+    <div class="contentFrame" data-pagename="自定义页面编码">测试时:</div>
+    <div>测试点击，我是一个div</div>
+    <span>我是一个span</span>
+    <div>
+      我是一个嵌套div
+      <div class="parent">
+        父级
+        <div class="son">
+          子级
+          <div class="grandson">
+            孙子级
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
       <ul>
-        <li>全埋点li点击</li>
+        <li data-anumber="1" data-astring="aStr" data-aboolean="true" data-afunction="function(){ console.log(1111);}" data-aobject="{a:1, b:2}" data-aarray="[1, 2, 3, 4]">我是一个li标签_1</li>
+        <li>我是一个li标签_2</li>
+        <li>我是一个li标签_3</li>
       </ul>
     </div>
-    <div class="auto_exp_event" data-pagename="autoexp_page">自动曝光</div>
-    <div class="auto_clk_event" data-pagename="autoclk_page">自动点击</div>
+    <div>
+      <img src="https://ggzlimg.dpm.org.cn/app/gugong/2021/0918/PdbOo338JdhiCgkfg9QIIBY0zRIDzNYaZeZrVuR2.jpg" alt="" style="width: 100px; height:50px">
+    </div>
+    <style>
+      svg {
+        transform: rotate(-0.05deg);
+      }
+      circle {
+        transition: stroke-dasharray .2s;
+      }
+      .time-count-x {
+        line-height: 1.5;
+        position: relative;
+      }
+      .time-second {
+        position: absolute;
+        top: 50%; left: 0; right: 0;
+        margin-top: -.75em;
+        text-align: center;
+        font-size: 100px;
+      }
+    </style>
+    <div id="timeCountX" class="time-count-x">
+      <svg width="440" height="440" viewBox="0 0 440 440" class="center" aplus-autotrack-off="true">
+          <defs>
+              <linearGradient x1="1" y1="0" x2="0" y2="0" id="gradient1">
+                  <stop offset="0%" stop-color="#e52c5c"></stop>
+                  <stop offset="100%" stop-color="#ab5aea"></stop>
+              </linearGradient>
+             <linearGradient x1="1" y1="0" x2="0" y2="0" id="gradient2">
+                  <stop offset="0%" stop-color="#4352f3"></stop>
+                  <stop offset="100%" stop-color="#ab5aea"></stop>
+              </linearGradient>
+          </defs>
+          <g transform="matrix(0,-1,1,0,0,440)">
+              <circle cx="220" cy="220" r="170" stroke-width="50" stroke="#f0f1f5" fill="none" stroke-dasharray="1069 1069"></circle>
+              <circle cx="220" cy="220" r="170" stroke-width="50" stroke="url('#gradient1')" fill="none" stroke-dasharray="1069 1069"></circle>
+              <circle cx="220" cy="220" r="170" stroke-width="50" stroke="url('#gradient2')" fill="none" stroke-dasharray="534.5 1069"></circle>
+          </g>
+      </svg>
+      <span id="timeSecond" class="time-second"></span>
+      <form id="testform" action="/action_page.php" method="get">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
   </div>
+  <!-- <iframe src='./iframe.html' id="iframe2" style={{ display: 'none'}}></iframe> -->
+  <!-- <iframe src='./iframe.html' id="iframe2" style="border:none;"> -->
+  </iframe>
 </body>
 
 </html>
